@@ -1,8 +1,8 @@
 {
-  "name": "edwin-and-maria-wedding",
+  "name": "highland-health-care",
   "private": true,
   "version": "0.1.0",
-  "description": "Wedding website for Edwin & Maria: invitation, venue, schedule, dress code, and RSVP.",
+  "description": "Responsive website for Highland Health Care in Deerfield Beach, Florida.",
   "type": "module",
   "scripts": {
     "dev": "vite",
