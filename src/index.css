@@ -1,0 +1,130 @@
+:root {
+  /* ---- brand palette (from colorscheme.png) ---- */
+  --cream: #f8efe7;
+  --blush: #ecacb1;
+  --wine: #471225;
+  --cocoa: #250f0d;
+  --sage: #a8b17e;
+  --olive: #445427;
+  --forest: #161d0a;
+  --ink: #000000;
+
+  /* derived tints */
+  --cream-deep: #f1e4d6;
+  --blush-soft: #f6d3d6;
+  --blush-deep: #d9949a;
+  --sage-soft: #d7dcc0;
+  --wine-soft: rgba(71, 18, 37, 0.08);
+  --olive-soft: rgba(68, 84, 39, 0.1);
+
+  --text: var(--cocoa);
+  --text-soft: #6d4f55;
+  --heading: var(--wine);
+  --accent: var(--olive);
+
+  --serif: 'Cormorant Garamond', 'Cormorant', Garamond, 'Times New Roman', serif;
+  --script: 'Pinyon Script', 'Brush Script MT', cursive;
+  --sans: 'Jost', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --shadow-card:
+    0 1px 2px rgba(37, 15, 13, 0.06),
+    0 18px 40px -18px rgba(37, 15, 13, 0.25);
+  --shadow-float:
+    0 10px 30px -10px rgba(37, 15, 13, 0.35),
+    0 40px 80px -40px rgba(37, 15, 13, 0.35);
+
+  font: 17px/1.6 var(--serif);
+  color: var(--text);
+  background: var(--cream);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  background: var(--cream);
+}
+
+/* Kept on body only so it still propagates to the viewport (and so the
+   is-locked override below actually locks the page). */
+body {
+  overflow-x: hidden;
+}
+
+body.is-locked {
+  overflow: hidden;
+}
+
+#root {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+:focus-visible {
+  outline: 2px solid var(--olive);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
